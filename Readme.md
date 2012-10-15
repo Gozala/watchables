@@ -1,6 +1,6 @@
 # Watchables
 
-[![Build Status](https://secure.travis-ci.org/Gozala/watchable.png)](http://travis-ci.org/Gozala/watchable)
+[![Build Status](https://secure.travis-ci.org/Gozala/watchables.png)](http://travis-ci.org/Gozala/watchables)
 
 Library defines watchable value abstraction, in form of three [polymorphic
 methods][method], where each one can be extended per type.
