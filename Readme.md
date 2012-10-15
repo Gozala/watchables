@@ -7,7 +7,7 @@ methods][method], where each one can be extended per type.
 
 ### watchers
 
-[watchables/watchers](./watchables/bin/master/watchers.js) module provides
+[watchables/watchers](./watchables/blob/master/watchers.js) module provides
 method that has no default implementation and supposed to be defined per type
 that wishes to implement this watchable abstraction:
 
@@ -22,7 +22,7 @@ watchers.define(Type, function(value) {
 
 ### watch
 
-[watchables/watch](./watchables/bin/master/watch.js) module provides
+[watchables/watch](./watchables/blob/master/watch.js) module provides
 polymorphic method that comes with a default implementation. Given that it's
 called with a value that implements `watchers` method and a observer function,
 it will register given observer for the value unless it's already being
@@ -55,7 +55,7 @@ watch.define(Type, function(value, listener) {
 
 ### unwatch
 
-[watchables/unwatch](./watchables/bin/master/unwatch.js) module provides
+[watchables/unwatch](./watchables/blob/master/unwatch.js) module provides
 polymorphic method that comes with a default implementation. Given that it's
 called with a value that implements `watchers` method and a observer function,
 it will unregister given observer for the value, if it's registered.
