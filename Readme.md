@@ -1,18 +1,18 @@
-# watchable
+# Watchables
 
 [![Build Status](https://secure.travis-ci.org/Gozala/watchable.png)](http://travis-ci.org/Gozala/watchable)
 
-Package defines watchable value abstraction, in form of three [polymorphic
+Library defines watchable value abstraction, in form of three [polymorphic
 methods][method], where each one can be extended per type.
 
 ### watchers
 
-[watchable/watchers](./watchers.js) module provides method that has no default
-implementation and supposed to be defined per type that wishes to implement
-this watchable abstraction:
+[watchables/watchers](./watchables/bin/master/watchers.js) module provides
+method that has no default implementation and supposed to be defined per type
+that wishes to implement this watchable abstraction:
 
 ```js
-var watchers = require("watchable/watchers")
+var watchers = require("watchables/watchers")
 function Type() { /* ... */ }
 watchers.define(Type, function(value) {
   // return array of registered observes for the given value,
@@ -22,14 +22,15 @@ watchers.define(Type, function(value) {
 
 ### watch
 
-[watchable/watch](./watch.js) module provides polymorphic method that comes
-with a default implementation. Given that it's called with a value that
-implements `watchers` method and a observer function, it will register given
-observer for the value unless it's already being registered. Method can be
-defined for a specific type to better reflect it's needs.
+[watchables/watch](./watchables/bin/master/watch.js) module provides
+polymorphic method that comes with a default implementation. Given that it's
+called with a value that implements `watchers` method and a observer function,
+it will register given observer for the value unless it's already being
+registered. Method can be defined for a specific type to better reflect
+it's needs.
 
 ```js
-var watch = require("wathchable/watch")
+var watch = require("wathchables/watch")
 watch(new Type(), function() {
   console.log("!!!!")
 })
@@ -39,7 +40,7 @@ Method can also be extended with a type specific implementation.
 
 
 ```js
-var watch = require("wathchable/watch")
+var watch = require("wathchables/watch")
 watch.define(Type, function(value, listener) {
   var listeners = value._listeners
   if (typeof(listeners) === "undefined")
@@ -54,20 +55,20 @@ watch.define(Type, function(value, listener) {
 
 ### unwatch
 
-[watchable/unwatch](./unwatch.js) module provides polymorphic method that comes
-with a default implementation. Given that it's called with a value that
-implements `watchers` method and a observer function, it will unregister given
-observer for the value, if it's registered.
+[watchables/unwatch](./watchables/bin/master/unwatch.js) module provides
+polymorphic method that comes with a default implementation. Given that it's
+called with a value that implements `watchers` method and a observer function,
+it will unregister given observer for the value, if it's registered.
 
 ```js
-var unwatch = require("wathchable/unwatch")
+var unwatch = require("wathchables/unwatch")
 unwatch(value, myListener)
 ```
 
 Method can be extended with a type specific implementation.
 
 ```js
-var unwatch = require("wathchable/unwatch")
+var unwatch = require("wathchables/unwatch")
 unwatch.define(Type, function(value, listener) {
   var listeners = value._listeners
   var index = -1
@@ -88,6 +89,6 @@ unwatch.define(Type, function(value, listener) {
 
 ## Install
 
-    npm install watchable
+    npm install watchables
 
 [method]:https://github.com/Gozala/method
