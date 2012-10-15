@@ -1,0 +1,29 @@
+{
+  "name": "watchable",
+  "id": "watchable",
+  "version": "0.0.1",
+  "description": "Watchable value abstraction",
+  "keywords": [ "watchable" ],
+  "author": "Irakli Gozalishvili <rfobic@gmail.com> (http://jeditoolkit.com)",
+  "homepage": "https://github.com/Gozala/watchable",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gozala/watchable.git",
+    "web": "https://github.com/Gozala/watchable"
+  },
+  "bugs": {
+    "url": "http://github.com/Gozala/watchable/issues/"
+  },
+  "devDependencies": {
+    "test": ">=0.4.4",
+    "repl-utils": ">=1.0.0"
+  },
+  "scripts": {
+    "test": "node test/test-all.js",
+    "repl": "node node_modules/repl-utils"
+  },
+  "licenses": [{
+    "type" : "MIT",
+    "url" : "https://github.com/Gozala/watchable/License.md"
+  }]
+}
