@@ -16,7 +16,7 @@
   },
   "main": "./index.js",
   "dependencies": {
-    "method": ">=0.1.1"
+    "method": "~1.0.0"
   },
   "devDependencies": {
     "test": "~0.x.0",

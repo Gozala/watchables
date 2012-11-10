@@ -1,11 +1,8 @@
-/*jshint asi: true undef: true es5: true node: true devel: true
-         globalstrict: true forin: true latedef: false supernew: true */
-/*global define: true */
-
 "use strict";
 
-var Method = require('method')
+var method = require("method")
 
 // Method is supposed to return array of watchers for the given
 // value.
-module.exports = Method()
+var watchers = method("watchers")
+module.exports = watchers
