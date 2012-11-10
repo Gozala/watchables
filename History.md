@@ -1,5 +1,10 @@
 # Changes
 
+## 0.1.0 / 2012-11-09
+
+  - Update to new version of `method` library.
+  - Browser test integration.
+
 ## 0.0.3 / 2012-10-15
 
   - Declare missing dependency on method lib.

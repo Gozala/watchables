@@ -1,7 +1,7 @@
 {
   "name": "watchables",
   "id": "watchables",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Watchable value abstraction",
   "keywords": [ "watchables", "polymorphic", "method", "abstraction" ],
   "author": "Irakli Gozalishvili <rfobic@gmail.com> (http://jeditoolkit.com)",
